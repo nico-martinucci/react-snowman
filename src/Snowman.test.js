@@ -14,7 +14,8 @@ it("matches snapshot", function () {
 });
 
 it("ends the game after six wrong guesses", function () {
-    const { container } = render(<Snowman />);
+    const words = ["apple"];
+    const { container } = render(<Snowman words={ words }/>);
 
     // grab six buttons that aren't in "apple"
     const zButton = container.querySelector('button[value="z"]');
